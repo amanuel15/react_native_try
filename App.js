@@ -1,12 +1,12 @@
+import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, {useState} from 'react';
+import { StyleSheet, Text, View, TextInput, } from 'react-native';
+import Navigator from './routes/drawer';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Navigator />
   );
 }
 
@@ -17,4 +17,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  input: {
+    borderWidth: 1,
+    borderColor: '#777',
+    width: 200,
+    padding: 20,
+    margin: 20,
+  }
 });
