@@ -3,10 +3,13 @@ import { StatusBar } from 'expo-status-bar';
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, TextInput, } from 'react-native';
 import Navigator from './routes/drawer';
+import { NavigationContainer } from "@react-navigation/native";
 
 export default function App() {
   return (
-    <Navigator />
+    <NavigationContainer>
+      <Navigator />
+    </NavigationContainer>
   );
 }
 
