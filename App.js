@@ -4,12 +4,16 @@ import React, {useState} from 'react';
 import { StyleSheet, Text, View, TextInput, } from 'react-native';
 import Navigator from './routes/drawer';
 import { NavigationContainer } from "@react-navigation/native";
+import store from './redux/store'
+import { Provider } from 'react-redux'
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <Navigator />
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Navigator />
+      </NavigationContainer>
+    </Provider>
   );
 }
 
